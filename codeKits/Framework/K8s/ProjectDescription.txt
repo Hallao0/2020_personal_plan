@@ -1,0 +1,3 @@
+...
+业务需求：
+减少当前server负载，所以把k8s cluster当作executors cluster用

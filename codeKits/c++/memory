@@ -1,0 +1,13 @@
+b站视频学习笔记
+
+c++ application
+c++ application -> c++ lib (std::allocator)
+c++ application -> c++ lib (std::allocator) -> c++ primitives (new, new[])
+c++ application -> c++ lib (std::allocator) -> c++ primitives (new, new[]) -> crt（malloc, free）
+c++ application -> c++ lib (std::allocator) -> c++ primitives (new, new[]) -> crt -> os.api (heap alloc, virtual alloc)
+
+分配                                 释放                        类属           可否重载
+malloc                           free()                       c++函数           no
+new                              delete                       c++表达式         no
+::operator new()                 ::operator delete()          c++函数           yes
+allocator<T>::allocate()         allocator<T>::deallocate     c++标准库         可自由设计并以之搭配任何容器
